@@ -1,0 +1,10 @@
+# playbook.yml
+
+- name: configure the demo application
+  hosts: demo
+  become: true
+  roles:
+    - docker
+    - task
+    - git
+
