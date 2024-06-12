@@ -22,6 +22,8 @@
    - Change directory to `cd terraform/dev`.
    - Ensure AWS CLI has been configured and update the profile name in `main.tf`.
    - Run `terraform init` command to initialize Terraform configurations.
+   - Run `terraform plan` command to see plan
+   - RUN `terraform apply` command to Deploy the Infrastructure
 
 2. **Ansible Setup**:
    - Install required packages on the server using Ansible.
