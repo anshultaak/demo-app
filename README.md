@@ -57,11 +57,13 @@
 2. **Tasks**:
    - **build**: Docker image build command.
    - **lint**: Review Dockerfile using Hadolint for code quality.
-   - **deploy**: Deploy the application with Doppler.
+   - **deploy**: Deploy the application without Doppler environment.
    - **deploywithdoppler**: Deploy the application using Doppler environment.
    - **test**: Run `test.sh` script to check application functionality.
-   - **clean**: Clean the running Docker containers.
+   - **clean**: Clean the running application Docker containers.
    - **deploy_app**: Run multiple tasks together: build, lint, deploywithdoppler, and test.
+   - **force_clean**: Clean the running all Docker containers.
+   - **images_clean**: Clean the all Docker images.
 
 ## Hadolint Explanation
 
