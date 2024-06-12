@@ -39,7 +39,7 @@
    - SSH into the server: `ssh ubuntu@IP -i $PRIVATE_KEY_PATH`.
    - Clone the repository: `git clone https://github.com/anshultaak/demo-app.git`.
    - Run the `taskfile.yaml` to deploy the application.
-     - Use `task deploy_cicd` command to deploy the application.
+     - Use `task deploy_app` command to deploy the application.
      - Use `task clean` command to clean the running Docker containers.
 
 ## Taskfile.yaml Explanation
@@ -59,7 +59,7 @@
    - **deploywithdoppler**: Deploy the application using Doppler environment.
    - **test**: Run `test.sh` script to check application functionality.
    - **clean**: Clean the running Docker containers.
-   - **deploy_cicd**: Run multiple tasks together: build, lint, deploywithdoppler, and test.
+   - **deploy_app**: Run multiple tasks together: build, lint, deploywithdoppler, and test.
 
 ## Hadolint Explanation
 
