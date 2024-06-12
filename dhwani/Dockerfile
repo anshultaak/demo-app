@@ -23,5 +23,5 @@ EXPOSE 4200
 ENV NODE_ENV=production
 
 # Define the command to run your app
-CMD ["ng", "start"]
+CMD ["npm", "start"]
 

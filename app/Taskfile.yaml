@@ -1,0 +1,52 @@
+version: '3'
+
+env:
+  container_name: webapp
+  hadolint_config: ./hadolint.yaml
+  hadolint_image: hadolint/hadolint 
+  doppler_token: "dp.st.dev.ZwaGcUGrpjVeJy6zmURNeESIvjR5Id2vZgLGTL1jLue"
+  local_port: 80
+  container_port: 3000
+
+tasks:
+  build:
+    desc: "Build the $container_name Docker image"
+    cmds:
+      - docker build --build-arg WEBTEXT="Hello World" -t $container_name .
+
+  lint:
+    desc: "Lint the Dockerfile using Hadolint"
+    cmds:
+      - docker run --rm -i -v $hadolint_config:/.config/hadolint.yaml $hadolint_image < Dockerfile
+
+  deploy:
+    desc: "Run the $container_name container locally"
+    cmds:
+      - docker run -d --name $container_name -p $local_port:$container_port -e WEBTEXT="Development deploy without doppler" $container_name
+
+  deploywithdoppler:
+    desc: "Run the $container_name container with Doppler"
+    cmds:
+      - export WEBTEXT="$(doppler secrets get WEBTEXT --plain --token $doppler_token)" && echo $WEBTEXT && docker run -d --name $container_name -p $local_port:$container_port -e WEBTEXT="$WEBTEXT" $container_name
+
+  test:
+    desc: "Test the deployment"
+    cmds:
+      - |
+        sleep 10
+        sh ./test.sh
+
+  clean:
+    desc: "Stop and remove the $container_name container"
+    cmds:
+      - docker stop $container_name || true
+      - docker rm $container_name || true
+
+  cicd:
+    desc: "Run the CI/CD pipeline"
+    cmds:
+      - task: build
+      - task: lint
+      - task: deploywithdoppler
+      - task: test
+        #      - task: clean

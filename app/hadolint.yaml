@@ -1,0 +1,12 @@
+failure-threshold: warning
+override:
+  error:
+    - DL3008
+
+trustedRegistries:
+  - docker.io
+  - "*.gcr.io"
+
+ignored:
+  - DL3000
+  - SC1010
