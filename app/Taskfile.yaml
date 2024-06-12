@@ -41,11 +41,11 @@ tasks:
       - docker stop $container_name || true
       - docker rm $container_name || true
 
-  cicd:
-    desc: "Run the CI/CD pipeline"
+  deploy_app:
+    desc: "Run the application pipeline"
     cmds:
       - task: build
       - task: lint
       - task: deploywithdoppler
       - task: test
-        #      - task: clean
+
