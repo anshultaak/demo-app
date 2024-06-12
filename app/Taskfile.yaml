@@ -18,7 +18,7 @@ tasks:
   build:
     desc: "Build the {{.container_name}} Docker image"
     cmds:
-      - docker build --build-arg WEBTEXT="Hello World" -t {{.container_name}} .
+      - docker build -t {{.container_name}} .
 
   lint:
     desc: "Lint the Dockerfile using Hadolint"
