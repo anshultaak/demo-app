@@ -12,6 +12,8 @@ resource "aws_instance" "frontend" {
     encrypted             = var.encrypted
     delete_on_termination = var.delete_on_termination
   }
+  
+  iam_instance_profile   = var.iam_role
 
   tags = {
     Name = "${var.env}-${var.project}"

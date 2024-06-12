@@ -4,7 +4,9 @@
   hosts: demo
   become: true
   roles:
-    - docker
-    - task
-    - git
+    #- aws
+      #    - docker
+      # - task
+      # - git
+    - doopler
 

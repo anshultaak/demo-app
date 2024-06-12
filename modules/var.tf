@@ -78,3 +78,7 @@ variable "eip" {
   default     = false
 }
 
+variable "iam_role" {
+  description = "IAM role for ec2"
+  default     = ""
+}
