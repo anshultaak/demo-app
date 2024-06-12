@@ -12,7 +12,11 @@
 
 ## Infrastructure Diagram
 
-[Insert Infrastructure Diagram Here]
+![Untitled Diagram drawio](https://github.com/anshultaak/demo-app/assets/76546821/0a036e02-16a1-491e-910c-3d8e5174727e)
+![Untitled Diagram drawio](https://github.com/anshultaak/demo-app/assets/76546821/0a036e02-16a1-491e-910c-3d8e5174727e)
+
+
+
 
 ## Infrastructure Setup
 
