@@ -61,17 +61,17 @@
    - **clean**: Clean the running Docker containers.
    - **deploy_cicd**: Run multiple tasks together: build, lint, deploywithdoppler, and test.
 
-Hadolint Explanation
-Purpose:
+## Hadolint Explanation
 
-Hadolint is used to lint your Dockerfile, ensuring it follows best practices and coding standards.
-Configuration:
+1. **Purpose**:
+   - Hadolint is used to lint your Dockerfile, ensuring it follows best practices and coding standards.
 
-Configuration for Hadolint is defined in the hadolint.yaml file.
-Key configuration options include:
-failure-threshold: Specifies the threshold level for reporting issues (e.g., error, warning, info, style, ignore, none).
-trustedRegistries: Defines trusted URLs that can be used in the Dockerfile.
-ignored: Specifies which errors should be ignored during linting.
-Documentation:
+2. **Configuration**:
+   - Configuration for Hadolint is defined in the `hadolint.yaml` file.
+   - Key configuration options include:
+     - **failure-threshold**: Specifies the threshold level for reporting issues (e.g., `error`, `warning`, `info`, `style`, `ignore`, `none`).
+     - **trustedRegistries**: Defines trusted URLs that can be used in the Dockerfile.
+     - **ignored**: Specifies which errors should be ignored during linting.
 
-For more detailed information and additional configuration options, refer to the Hadolint documentation.
+3. **Documentation**:
+   - For more detailed information and additional configuration options, refer to the [Hadolint documentation](https://github.com/hadolint/hadolint).
