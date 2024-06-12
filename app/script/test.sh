@@ -1,5 +1,5 @@
 #!/bin/sh
-
+sleep 10
 # URL to check
 URL="http://localhost:80"
 
