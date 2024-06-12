@@ -61,7 +61,7 @@
    - **deploywithdoppler**: Deploy the application using Doppler environment.
    - **test**: Run `test.sh` script to check application functionality.
    - **clean**: Clean the running application Docker containers.
-   - **deploy_app**: Run multiple tasks together: build, lint, deploywithdoppler, and test.
+   - **deploy_app**: Run multiple tasks together: clean, build, lint, deploywithdoppler, and test.
    - **force_clean**: Clean the running all Docker containers.
    - **images_clean**: Clean the all Docker images.
 
