@@ -5,7 +5,6 @@ override:
 
 trustedRegistries:
   - docker.io
-  - "*.gcr.io"
 
 ignored:
   - DL3000

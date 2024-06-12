@@ -3,8 +3,7 @@ version: '3'
 env:
   container_name: webapp
   hadolint_config: ./hadolint.yaml
-  hadolint_image: hadolint/hadolint 
-  doppler_token: "dp.st.dev.ZwaGcUGrpjVeJy6zmURNeESIvjR5Id2vZgLGTL1jLue"
+  hadolint_image: hadolint/hadolint
   local_port: 80
   container_port: 3000
 
@@ -27,7 +26,7 @@ tasks:
   deploywithdoppler:
     desc: "Run the $container_name container with Doppler"
     cmds:
-      - export WEBTEXT="$(doppler secrets get WEBTEXT --plain --token $doppler_token)" && echo $WEBTEXT && docker run -d --name $container_name -p $local_port:$container_port -e WEBTEXT="$WEBTEXT" $container_name
+      - export doopler_token="$(aws ssm get-parameter --name "doppler_token" --query "Parameter.Value" --output text)" && export WEBTEXT="$(doppler secrets get WEBTEXT --plain --token $doopler_token)" && docker run -d --name $container_name -p $local_port:$container_port -e WEBTEXT="$WEBTEXT" $container_name
 
   test:
     desc: "Test the deployment"

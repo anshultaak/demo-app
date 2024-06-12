@@ -19,16 +19,13 @@ RUN npm install
 # Copy the rest of the application code
 COPY --chown=appuser:appuser . .
 
-# Build the React app
-#RUN npm run build
-
 # Expose the port the app runs on
 EXPOSE 3000
 
 # Set environment variables
-ENV NODE_ENV=production
+ENV WEBTEXT="Hello World"
 
-ARG WEBTEXT
+#ARG WEBTEXT
 # Define the command to run your app
 CMD ["npm", "start"]
 
