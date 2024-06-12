@@ -7,7 +7,7 @@
 3. **Git**: Version control system used for tracking changes in the application codebase.
 4. **Ansible**: Configuration management tool used for automating the deployment and configuration of infrastructure.
 5. **Terraform**: Infrastructure as Code (IaC) tool used for provisioning and managing AWS infrastructure.
-6. **SSM Parameter**: AWS Systems Manager Parameter Store used for storing configuration data securely.
+6. **SSM Parameter**: AWS Systems Manager Parameter Store used for storing Doppler token.
 7. **Doppler**: Secret and configuration management tool used for managing application secrets and environment variables.
 
 ## Infrastructure Diagram
@@ -61,4 +61,17 @@
    - **clean**: Clean the running Docker containers.
    - **deploy_cicd**: Run multiple tasks together: build, lint, deploywithdoppler, and test.
 
-Feel free to reach out if you have any questions or need further assistance!
+Hadolint Explanation
+Purpose:
+
+Hadolint is used to lint your Dockerfile, ensuring it follows best practices and coding standards.
+Configuration:
+
+Configuration for Hadolint is defined in the hadolint.yaml file.
+Key configuration options include:
+failure-threshold: Specifies the threshold level for reporting issues (e.g., error, warning, info, style, ignore, none).
+trustedRegistries: Defines trusted URLs that can be used in the Dockerfile.
+ignored: Specifies which errors should be ignored during linting.
+Documentation:
+
+For more detailed information and additional configuration options, refer to the Hadolint documentation.
