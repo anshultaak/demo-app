@@ -24,6 +24,28 @@
    - Run `terraform init` command to initialize Terraform configurations.
    - Run `terraform plan` command to see plan
    - RUN `terraform apply` command to Deploy the Infrastructure
+     
+   ### Explanation of Module Parameters
+- `source`: Path to the module source.
+- `env`: Environment name, in this case, "test".
+- `project`: Project name, here it is "demo".
+- `key_name`: Key pair name used for the instances.
+- `vpc_id`: ID of the VPC where resources will be deployed.
+- `subnet_id`: ID of the subnet where instances will be launched.
+- `length`: Number of instances to launch.
+- `instance_type`: Type of instance, here it is `t3.medium`.
+- `ami`: AMI ID for the instance.
+- `volume_size`: Size of the EBS volume.
+- `volume_type`: Type of the EBS volume, here it is `gp3`.
+- `encrypted`: Whether the EBS volume is encrypted.
+- `delete_on_termination`: Whether to delete the volume on termination of the instance.
+- `eip`: Whether to allocate an Elastic IP to the instance.
+- `load_balancer`: Whether to use a load balancer.
+- `ssh_ports`: Ports to open for SSH access.
+- `ssh_cidr_block`: CIDR block allowed to access the instance via SSH.
+- `web_ports`: Ports to open for web access.
+- `web_cidr_blocks`: CIDR blocks allowed to access the instance via web ports.
+- `iam_role`: IAM role assigned to the instance.
 
 2. **Ansible Setup**:
    - Install required packages on the server using Ansible.
