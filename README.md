@@ -51,8 +51,8 @@
 | `iam_role`            | IAM role assigned to the instance            | `ssm_parameter`            |
 
 2. **Ansible Setup**:
-   - Install required packages on the server using Ansible. You can follow the installation steps [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
-   - Make sure Ansible is installed on your system.
+   - Install required packages on the server using Ansible. 
+   - Make sure Ansible is installed on your system. You can follow the installation steps [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
    - Change directory to `cd ansible`.
    - Run the Ansible playbook using the following command:
      ```
@@ -87,7 +87,7 @@
    - **test**: Run `test.sh` script to check application functionality.
    - **clean**: Clean the running application Docker containers.
    - **deploy_app**: Run multiple tasks together: clean, build, lint, deploywithdoppler, and test.
-   - **force_clean**: Clean the running all Docker containers.
+   - **force_clean**: Clean the all Docker containers.
    - **images_clean**: Clean the all Docker images.
 
 ## Hadolint Explanation
